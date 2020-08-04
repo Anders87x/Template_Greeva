@@ -1,0 +1,54 @@
+
+// 
+// dropdown.scss
+//
+
+.dropdown-menu {
+    padding: 4px 0;
+    font-size: $font-size-base;
+    box-shadow: $shadow-lg;
+    border: none;
+}
+
+.dropdown-menu-animated {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    margin-top: 20px!important;
+}
+
+.show>.dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0 !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: $dark;
+    text-decoration: none;
+    background-color: darken($white, 3%);
+}
+
+.dropdown-item {
+    padding: 6px 1.5rem;
+}
+
+.dropdown-lg {
+    width: 320px;
+}
+
+@media (max-width: 767px) {
+    .dropdown-lg {
+        width: 200px !important;
+    }
+}
+
+.arrow-none {
+    &:after {
+        border: none;
+        margin: 0;
+        display: none;
+    }
+}

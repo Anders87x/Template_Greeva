@@ -1,0 +1,17 @@
+
+// 
+// common.scss
+//
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+  font-size: $font-size-base;
+  background-color: $bg-body;
+}

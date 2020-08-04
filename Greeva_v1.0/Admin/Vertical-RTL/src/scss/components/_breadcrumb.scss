@@ -1,0 +1,13 @@
+// 
+// breadcrumb.scss
+//
+
+.breadcrumb-item {
+    + .breadcrumb-item {
+        padding-left: 0;
+    }
+    
+    + .breadcrumb-item::before {
+        padding-left: $breadcrumb-item-padding;
+    }
+}

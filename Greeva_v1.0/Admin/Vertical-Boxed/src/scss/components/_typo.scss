@@ -1,0 +1,14 @@
+
+// 
+// typo.scss
+//
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+  font-family: $font-secondary;
+  margin: 10px 0;
+  font-weight: $font-weight-semi-bold;
+}
+
+p{
+  line-height: 1.8;
+}

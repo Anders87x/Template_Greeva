@@ -1,0 +1,28 @@
+
+// 
+// footer.scss
+//
+
+.footer {
+  border-top: 1px solid rgba($gray-600,0.2);
+  bottom: 0;
+  padding: 19px 0;
+  position: absolute;
+  right: 0;
+  color: $gray-600;
+  left: $leftbar-width;
+}
+
+.enlarged #wrapper .footer {
+  left: 70px;
+}
+
+.side-menu-sm + .content-page + .footer {
+  left: $leftbar-width-sm;
+}
+
+@media (max-width: 768px) {
+  .footer {
+      left: 0 !important;
+  }
+}

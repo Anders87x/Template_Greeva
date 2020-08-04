@@ -1,0 +1,243 @@
+
+//
+// helper.scss
+//
+
+// Margins
+
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+
+.m-t-50 {
+  margin-top: 50px !important;
+}
+
+.margin-m-b-20 {
+  margin-bottom: -20px;
+}
+
+@media (max-width: 767px) {
+  .mt-md-30 {
+    margin-top: 30px;
+  }
+}
+
+.p-l-r-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+// minimum width
+.w-xs {
+  min-width: 80px;
+}
+.w-sm {
+  min-width: 95px;
+}
+.w-md {
+  min-width: 110px;
+}
+.w-lg {
+  min-width: 140px;
+}
+
+// Text overflow
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+// Margin minuse
+.pull-in {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+// Line height
+.line-h-24 {
+  line-height: 24px;
+}
+
+// Font sizes
+
+.font-13 {
+  font-size: 13px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.font-15 {
+  font-size: 15px !important;
+}
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+.font-18 {
+  font-size: 18px !important;
+}
+
+
+// Font weight
+.font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-weight-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+// Box shadow
+.bx-shadow {
+  box-shadow: $shadow;
+}
+
+.bx-shadow-lg {
+  box-shadow: $shadow-lg;
+}
+
+.bx-shadow-none {
+  box-shadow: none !important;
+}
+
+// Thumb size
+
+.thumb-sm {
+  height: 36px;
+  width: 36px;
+}
+.thumb-md {
+  height: 48px;
+  width: 48px;
+}
+.thumb-lg {
+  height: 88px;
+  width: 88px;
+}
+.thumb-xl {
+  height: 120px;
+  width: 120px;
+}
+
+// Slimscroll
+.slimScrollDiv {
+  height: auto !important;
+}
+
+// table type box
+.table-box {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .table-detail {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+
+// Social icons
+.social-links li a {
+  border-radius: 50%;
+  color: rgba($gray-700,0.8);
+  display: inline-block;
+  height: 30px;
+  line-height: 27px;
+  border: 2px solid rgba($gray-700,0.5);
+  text-align: center;
+  width: 30px;
+
+  &:hover {
+    color: $gray-700;
+    border: 2px solid $gray-700;
+  }
+}
+
+// Button demo ( Demo only )
+.button-list {
+  margin-left: -8px;
+  margin-bottom: -12px;
+  .btn {
+    margin-bottom: 12px;
+    margin-left: 8px;
+  }
+}
+
+
+// Icon demo ( Demo only )
+.icons-list-demo {
+
+  div {
+    cursor: pointer;
+    line-height: 45px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+
+    p {
+      margin-bottom: 0;
+      line-height: inherit;
+    }
+  }
+
+  i {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 12px;
+    color: rgba($dark,0.7);
+    border-radius: 3px;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .col-md-4 {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    background-clip: padding-box;
+    margin-bottom: 10px;
+
+    &:hover,&:hover i {
+      color: $cyan;
+    }
+  }
+}
+
+
+// Gradient
+.gradient-primary {
+  background-image: linear-gradient(15deg, lighten($primary,30%) 0%, $primary 100%);
+}
+
+.gradient-success {
+  background-image: linear-gradient(15deg, $teal 0%, $green 100%);
+}
+
+.gradient-info {
+  background-image: linear-gradient(15deg, lighten($info,10%) 0%, $indigo 100%);
+}
+
+.gradient-warning {
+  background-image: linear-gradient(15deg, lighten($warning,10%) 0%, $warning 100%);
+}
+
+.gradient-danger {
+  background-image: linear-gradient(15deg, lighten($danger,10%) 0%, $pink 100%);
+}
+
+.gradient-dark {
+  background-image: linear-gradient(15deg, lighten($dark,10%) 0%, $dark 100%);
+}

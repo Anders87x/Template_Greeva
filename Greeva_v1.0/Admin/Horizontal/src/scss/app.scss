@@ -1,0 +1,97 @@
+/*
+Template Name: Greeva - Responsive Bootstrap 4 Admin Dashboard
+Author: CoderThemes
+File: Main Css File
+*/
+
+/* =================
+01. Bootstrap
+02. Common (Helper) 
+03. Menu
+04. Topbar
+05. Right Sidebar
+06. Footer
+07. Boxed Laayout
+08. Components
+09. Helper
+10. Form Elements
+11. Dashboard 
+12. Account Pages
+13. Calendar
+14. Charts
+15. Email
+16. FAQs
+17. Timeline
+18. Pricing
+================= */
+
+//Core files
+/* ===== 01. Bootstrap ===== */
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "_variables";
+@import "bootstrap/bootstrap";
+/* ===== 02. Common ===== */
+@import "common/common";
+/* ===== 03. Menu ===== */
+@import "structure/menu";
+/* ===== 04. Topbar ===== */
+@import "structure/topbar";
+/* ===== 05. Right Sidebar ===== */
+@import "structure/right-sidebar";
+/* ===== 06. Footer ===== */
+@import "structure/footer";
+/* ===== 07. Boxed Layout ===== */
+@import "structure/boxed-layout";
+
+//Components
+/* ===== 08. Components ===== */
+@import "components/alerts";
+@import "components/badge";
+@import "components/buttons";
+@import "components/card";
+@import "components/checkbox-radio";
+@import  "components/dropdown";
+@import "components/maps";
+@import "components/modal";
+@import "components/page-title";
+@import "components/print";
+@import "components/progress";
+@import "components/tables";
+@import "components/tabs";
+@import "components/typo";
+@import "components/widgets";
+@import "components/popover-tooltips";
+@import "components/sweetalert";
+@import "components/ribbons";
+
+//Helper
+/* ===== 09. Helper ===== */
+@import "helper/helper";
+
+//Forms
+/* ===== 10. Forms ===== */
+@import "forms/form-elements";
+@import "forms/form-summernote";
+@import "forms/form-advanced";
+@import "forms/form-validation";
+@import "forms/form-wizard";
+@import "forms/form-uploads";
+
+//Pages
+/* ===== 11. Dashboard ===== */
+@import "pages/dashboard";
+/* ===== 12. Account Pages ===== */
+@import "pages/account-pages";
+/* ===== 13. Calendar ===== */
+@import "pages/calendar";
+/* ===== 14. Charts ===== */
+@import "pages/charts";
+/* ===== 15. Email ===== */
+@import "pages/email";
+/* ===== 16. FAQ ===== */
+@import "pages/faq";
+/* ===== 17. Timeline ===== */
+@import "pages/timeline";
+/* ===== 18. Pricing ===== */
+@import "pages/pricing";

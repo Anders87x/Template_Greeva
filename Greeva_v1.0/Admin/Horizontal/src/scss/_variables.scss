@@ -1,0 +1,446 @@
+// Variables
+
+//
+// Custom variable
+//
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700');
+
+// Layout width
+$layout-width:                95%;
+
+// Body Background
+$bg-body:                   #f3f6f8;
+
+// Boxed layout width
+$boxed-layout-width:          1200px;
+
+// Shadow
+$shadow:                      0px 10px 35px 0px rgba(154, 161, 171, 0.1);
+$shadow-lg:                   0 0 45px 0 rgba(0, 0, 0, 0.12);
+
+//Topbar Background
+$bg-topbar:                 #343b4a;
+
+// Leftbar width
+$leftbar-width:               240px;
+
+//Rightbar Width
+$rightbar-width:              260px;
+
+//Font variables
+$font-secondary:              'Libre Franklin', sans-serif;
+
+// Font weight
+$font-weight-medium:          500;
+$font-weight-semi-bold:       600;
+
+
+//
+// Color system
+//
+
+// stylelint-disable
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #f3f6f8;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #98a6ad;
+$gray-700: #6c757d;
+$gray-800: #343a40;
+$gray-900: #3b3e47;
+$black:    #000;
+
+
+$grays: ();
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$blue:       #188ae2;
+$indigo:     #4eb7eb;
+$purple:     #6b5eae;
+$pink:       #ff679b;
+$red:        #f34943;
+$orange:     #fd7e14;
+$yellow:     #fbcc5c;
+$green:      #31ce77;
+$teal:       #02a8b5;
+$cyan:       #35b8e0;
+
+
+$colors: ();
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$primary:       $blue;
+$secondary:     $gray-700;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-200;
+$dark:          $gray-900;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+// stylelint-enable
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:              true;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1.5rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+), $spacers);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: ();
+$sizes: map-merge((
+  15: 15%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+), $sizes);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $gray-100;
+$body-color:                $gray-700;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $primary;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     none;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$component-active-bg:         $primary;
+
+$caret-width:                 .25em;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Libre Franklin', sans-serif;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:            $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+$font-size-base:              0.875rem;
+$font-size-lg:                ($font-size-base * 1.25);
+$font-size-sm:                ($font-size-base * .875);
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+
+$headings-margin-bottom:      $spacer;
+$headings-font-weight:        400;
+$headings-line-height:        1.1;
+
+
+$h1-font-size:                2.25rem;
+$h2-font-size:                1.875rem;
+$h3-font-size:                1.5rem;
+$h4-font-size:                1.125rem;
+$h5-font-size:                0.9375rem;
+$h6-font-size:                0.75rem;
+
+$display-line-height:         $headings-line-height;
+
+$lead-font-size:              ($font-size-base * 1.25);
+
+$small-font-size:             0.75rem;
+
+$text-muted:                  $gray-600;
+
+$blockquote-font-size:        ($font-size-base * 1.25);
+
+$hr-border-color:             $gray-200;
+
+$list-inline-padding:         6px;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-cell-padding:          .95rem;
+$table-cell-padding-sm:       .5rem;
+
+$table-accent-bg:             $gray-100;
+$table-hover-bg:              $gray-100;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-focus-width:       .15rem;
+$input-btn-focus-color:       rgba($dark, .25);
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+$input-btn-padding-y-sm:      .22rem;
+$input-btn-padding-x-sm:      .7rem;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-line-height:             $input-btn-line-height;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm;
+$btn-padding-x-sm:            $input-btn-padding-x-sm;
+$btn-line-height-sm:          $input-btn-line-height-sm;
+//Custom button color
+$btn-text-color:              $white;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg;
+$btn-padding-x-lg:            $input-btn-padding-x-lg;
+$btn-line-height-lg:          $input-btn-line-height-lg;
+
+$btn-font-weight:             $font-weight-normal;
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow;
+
+$btn-link-disabled-color:     $gray-500;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           .15rem;
+$btn-border-radius-lg:        .15rem;
+$btn-border-radius-sm:        .15rem;
+
+// Forms
+
+$input-padding-y:                       $input-btn-padding-y;
+$input-padding-x:                       $input-btn-padding-x;
+$input-line-height:                     $input-btn-line-height;
+
+$input-padding-y-sm:                    $input-btn-padding-y-sm;
+$input-padding-x-sm:                    $input-btn-padding-x-sm;
+$input-line-height-sm:                  $input-btn-line-height-sm;
+
+$input-padding-y-lg:                    $input-btn-padding-y-lg;
+$input-padding-x-lg:                    $input-btn-padding-x-lg;
+$input-line-height-lg:                  $input-btn-line-height-lg;
+
+$input-color:                           $body-color;
+$input-border-color:                    $gray-400;
+
+$input-focus-box-shadow:                transparent;
+
+$input-placeholder-color:               $gray-500;
+
+$input-height-inner-sm:                 ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2);
+
+$custom-control-indicator-checked-color:        $primary;
+$custom-control-indicator-checked-bg:           $primary;
+
+$custom-select-focus-border-color:  $input-focus-border-color;
+$custom-select-focus-box-shadow:    inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5);
+
+$custom-file-focus-border-color:    $input-focus-border-color;
+$custom-file-text: (
+  en: "Browse"
+);
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+
+$dropdown-link-color:               $body-color;
+$dropdown-link-hover-color:         $headings-color;
+
+$dropdown-link-active-color:        $component-active-color;
+$dropdown-link-active-bg:           $component-active-bg;
+
+$dropdown-item-padding-y:           .375rem;
+
+$dropdown-header-color:             inherit;
+
+
+// Navs
+
+$nav-pills-link-active-bg:          $component-active-bg;
+
+// Pagination
+
+$pagination-color:                  $dark;
+
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+
+$pagination-hover-color:            $dark;
+
+$pagination-active-bg:              lighten($dark,25%);
+$pagination-active-border-color:    $pagination-active-bg;
+
+// Cards
+
+$card-spacer-y:                     1rem;
+$card-spacer-x:                     1.5rem;
+$card-border-color:                 transparent;
+$card-cap-bg:                       $gray-100;
+$card-columns-gap:                  $grid-gutter-width;
+$card-columns-margin:               $grid-gutter-width;
+
+
+// Tooltips
+
+$tooltip-font-size:           $font-size-sm;
+
+
+// Popovers
+
+$popover-font-size:                 $font-size-sm;
+$popover-border-color:              $gray-400;
+
+$popover-header-padding-y:          .8rem;
+$popover-header-padding-x:          .95rem;
+
+
+// Badges
+
+$badge-font-weight:                 $font-weight-bold;
+
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:         1.5rem;
+
+$modal-content-border-color:     rgba($black, .1);
+
+$modal-header-padding:        1.5rem;
+
+
+// Progress bars
+
+$progress-bar-bg:                   theme-color("primary");
+
+// List group
+
+$list-group-active-bg:              $component-active-bg;
+
+
+
+// Figures
+
+$figure-caption-font-size:          $small-font-size;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:              $spacer/1.5;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           .5rem;
+
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider-color:          $gray-400;
+$breadcrumb-active-color:           $gray-500;
+$breadcrumb-divider:                "/";
+
+
+// Code
+
+$code-color:                        $cyan;

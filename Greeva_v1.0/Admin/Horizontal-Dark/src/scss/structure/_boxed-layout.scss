@@ -1,0 +1,10 @@
+//
+// Boxed Layout
+//
+
+#boxed-layout {
+    .wrapper,.navbar-custom,.topbar-menu {
+        max-width: $boxed-layout-width;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,24 @@
+
+// 
+// print.scss
+//
+
+// Used invoice page
+
+@media print {
+  #topnav,.page-title-box,.footer,.left-side-menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .content-page,.content {
+    margin: 0 !important; 
+  }
+  .container-fluid {
+    max-width: 100%;
+  }
+  .card-box {
+    padding: 20px 0 0 0;
+    border: none;
+  }
+}

@@ -1,0 +1,19 @@
+/* =============
+  Menu - Overlay
+============= */
+
+// Overlay layout
+.layout-overlay.enlarged {
+    .left-side-menu {
+        margin-left: -100%;
+    }
+}
+.layout-overlay {
+    .content-page {
+        margin-left: 0 !important;
+    }
+    .navbar-custom .logo {
+        text-align: left;
+        padding-left: 30px;
+    }
+}

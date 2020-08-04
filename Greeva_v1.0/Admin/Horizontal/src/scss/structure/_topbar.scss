@@ -1,0 +1,188 @@
+
+// 
+// topbar.scss
+//
+
+.navbar-custom {
+  border-radius: 0;
+  min-height: 70px;
+  color: $white;
+  z-index: 2;
+
+  .nav-link {
+    padding: 0;
+    line-height: 69px;
+    color: rgba($white,0.8);
+  }
+
+  .dropdown-toggle {
+    &:after {
+      content: initial;
+    }
+  }
+
+  .menu-left {
+    overflow: hidden;
+  }
+
+  .topbar-right-menu {
+    li {
+      float: left;
+    }
+  }
+
+  .logo {
+    line-height: 70px;
+    margin-right: 50px;
+
+    .logo-sm {
+      display: none;
+    }
+  }
+
+  .dropdown-menu-right {
+    transform: none !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+}
+
+/* Search */
+.app-search {
+  padding-top: 16px;
+  padding-right: 20px;
+
+  .form-control,
+  .form-control:focus {
+    border: none;
+    height: 38px;
+    color: $white;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba($white,0.1);
+    box-shadow: none;
+    border-radius: 5px;
+    min-width: 180px;
+    width: 50%;
+  }
+}
+
+/* Notification */
+.notification-wrapper {
+  max-height: 190px;
+}
+
+.notification-list {
+  margin-left: 0;
+
+  .noti-title {
+    background-color: $white;
+    padding: 15px 20px;
+  }
+
+  .noti-icon {
+    font-size: 20px;
+    padding: 0 15px;
+    vertical-align: middle;
+  }
+  .noti-icon-badge {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    right: 8px;
+  }
+  .notify-item {
+    padding: 12px 20px;
+
+    .notify-icon {
+      float: left;
+      height: 36px;
+      width: 36px;
+      line-height: 36px;
+      text-align: center;
+      margin-right: 10px;
+      border-radius: 50%;
+      color: $white;
+    }
+    .notify-details {
+      margin-bottom: 0;
+      overflow: hidden;
+      margin-left: 45px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: $dark;
+      font-size: 13px;
+      font-weight: $font-weight-medium;
+      b {
+        font-weight: $font-weight-medium;
+      }
+      small {
+        display: block;
+      }
+      span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 13px;
+      }
+    }
+    .user-msg {
+      margin-left: 45px;
+      white-space: normal;
+      line-height: 20px;
+    }
+  }
+  
+  .profile-dropdown {
+    .notify-item {
+      padding: 7px 20px;
+    }
+  }
+}
+
+.profile-dropdown {
+  width: 170px;
+  i {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+
+.nav-user {
+  padding: 0 12px !important;
+
+  img {
+    height:32px;
+    width: 32px;
+  }
+}
+
+.noti-scroll {
+  max-height: 230px;
+}
+
+@media (max-width: 640px) {
+  .app-search {
+    display: none;
+  }
+  .nav-user {
+    span {
+      display: none;
+    }
+  }
+  .navbar-custom {
+    .logo {
+      .logo-lg {
+        display: none;
+      }
+      .logo-sm {
+        display: inline-block;
+      }
+    }
+  }
+}

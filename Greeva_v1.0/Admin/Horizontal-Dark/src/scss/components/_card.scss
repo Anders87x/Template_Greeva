@@ -1,0 +1,44 @@
+
+// 
+// card.scss
+//
+
+.card {
+  border: none !important;
+  background-color: $bg-layout;
+}
+
+//Card Box
+.card-box{
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-color: $bg-layout;
+
+  .header-title {
+    margin-bottom: 8px;
+    font-size: ($font-size-base * 1.15);
+    margin-top: 0;
+  }
+
+  .card-drop {
+    font-size: 20px;
+    line-height: 30px;
+    color: inherit;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    margin-top: -6px;
+
+    &:hover {
+      background-color: lighten($bg-layout,5%);
+    }
+  }
+}
+
+// Card
+.card-title,.card-header {
+  margin-top: 0 !important;
+}

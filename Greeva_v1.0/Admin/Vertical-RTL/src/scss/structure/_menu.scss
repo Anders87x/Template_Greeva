@@ -1,0 +1,373 @@
+/* =============
+  Menu
+============= */
+
+/* Metis Menu css */
+.metismenu {
+    padding: 0;
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+}
+
+.nav-second-level,
+.nav-thrid-level{
+    li {
+        a{
+            padding: 10px 20px;
+            color: $menu-item-color;
+            display: block;
+            font-size: 13px;
+            position: relative;
+            
+            &:focus,
+            &:hover {
+                background-color: $bg-leftbar;
+                color: $menu-item-hover-color;
+            }
+        }
+    }
+}
+
+.nav-second-level{
+    >li{
+        >a {
+            padding-right: 58px;
+        }
+    }
+}
+
+.nav-second-level,
+.nav-third-level {
+    li.active {
+        >a {
+            color: $menu-sub-item-active-color;
+        }
+    }
+}
+
+.nav-third-level{
+    >li{
+        >a {
+            padding-right: 68px;
+        }
+    }
+}
+
+
+// Leftbar Menu
+.left-side-menu {
+    width: $leftbar-width;
+    z-index: 10;
+    background: $bg-leftbar;
+    bottom: 0;
+    padding: 20px 0 30px 0;
+    position: fixed;
+    top: 70px;
+    box-shadow: $shadow;
+    transition-duration: .2s;
+    text-align: right;
+
+    .topbar-left {
+        height: 70px;
+        padding-left: 25px;
+        position: fixed;
+        z-index: 1;
+        width: $leftbar-width;
+        top: 0;
+    }
+}
+
+.content-page {
+    margin-right: $leftbar-width;
+    overflow: hidden;
+    padding: 0 15px;
+    min-height: 80vh;
+
+    .content {
+        margin-top: 70px;
+    }
+}
+
+
+#sidebar-menu {
+    > ul {
+        > li{
+            > a {
+                color: $menu-item-color;
+                display: block;
+                padding: 14px 20px;
+                margin: 2px 0;
+                font-size: 15px;
+                position: relative;
+                border-left: 2px solid transparent;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $menu-item-hover-color;
+                    text-decoration: none;
+                }
+
+                > span {
+                    vertical-align: middle;
+                }
+
+                i {
+                    display: inline-block;
+                    font-size: 18px;
+                    line-height: 17px;
+                    margin: 0 3px 0 10px;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 20px;
+                }
+                .drop-arrow {
+                    float: left;
+                    i {
+                        margin-left: 0;
+                    }
+                }
+            }
+            > a.active {
+                color: $menu-item-active-color;
+                background-color: $gray-100;
+                border-left-color: $menu-item-active-color;
+            }
+        }
+    }
+
+    .menu-arrow {
+        transition: transform .15s;
+        position: absolute;
+        left: 20px;
+        display: inline-block;
+        font-family: 'Material Design Icons';
+        text-rendering: auto;
+        line-height: 24px;
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        &:before {
+            content: "\F141";
+        }
+    }
+
+    .badge{
+        margin-top: 4px;
+    }
+
+    li.active {
+        .menu-arrow {
+            -ms-transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+    }
+
+    .menu-title {
+        padding: 12px 20px;
+        letter-spacing: .05em;
+        pointer-events: none;
+        cursor: default;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $gray-600;
+        font-family: $font-secondary;
+    }
+}
+
+// Menu Enlarge
+
+.enlarged #wrapper {
+    .slimScrollDiv,
+    .slimscroll-menu {
+        overflow: inherit !important;
+        height: auto !important;
+    }
+
+    .left-side-menu {
+        .slimScrollBar {
+            visibility: hidden;
+        }
+    }
+
+    #sidebar-menu {
+
+        .menu-title,
+        .menu-arrow,
+        .badge,
+        .collapse.in {
+            display: none !important;
+        }
+        
+        .nav.collapse {
+            height: inherit !important;
+        }
+
+        ul {
+            ul {
+                margin-top: -2px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                z-index: 9999;
+                background-color: $bg-leftbar;
+            }
+        }
+    }
+    .left-side-menu {
+        width: 70px;
+        position: absolute;
+        padding-top: 50px;
+
+        #sidebar-menu {
+            > ul {
+                > li {
+                    position: relative;
+                    white-space: nowrap;
+                    &:hover >a {
+                        position: relative;
+                        width: 260px;
+                        color: $white;
+                        background-color: $dark;
+                    }
+                    &:hover >ul {
+                        display: block;
+                        right: 70px;
+                        position: absolute;
+                        width: 190px;
+                        height: auto !important;
+                        box-shadow: $shadow;
+
+                        a {
+                            box-shadow: none;
+                            padding: 8px 20px;
+                            position: relative;
+                            width: 190px;
+                            z-index: 6;
+                            &:hover {
+                                color: $dark;
+                            }
+                        }
+                    }
+                    &:hover {
+                        a {
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    > a {
+                        padding: 15px 20px;
+                        min-height: 53px;
+
+                        i {
+                            font-size: 20px;
+                            margin-left: 20px;
+                        }
+                        span {
+                            display: none;
+                            padding-right: 10px;
+                        }
+                    }
+
+                    &:hover>a.open,&:hover>a.active {
+                        :after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            ul {
+                ul {
+                    li {
+                        &:hover>ul {
+                            display: block;
+                            right: 190px;
+                            margin-top: -36px;
+                            position: absolute;
+                            width: 190px;
+                        }
+                    }
+                    li>a {
+                        span.pull-right {
+                            -ms-transform: rotate(270deg);
+                            -webkit-transform: rotate(270deg);
+                            position: absolute;
+                            left: 20px;
+                            top: 12px;
+                            transform: rotate(270deg);
+                        }
+                    }
+                    li.active {
+                        a {
+                            color: $dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content-page {
+        margin-right: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Body min-height set */
+    body.enlarged {
+        min-height: 1200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content-page {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .content-page {
+        margin-right: 0 !important;
+    }
+    .enlarged #wrapper {
+        .left-side-menu {
+            margin-right: -100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .dropdown-lg {
+        width: 200px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        display: none !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .hide-phone {
+        display: none !important;
+    }
+}
+
+@media (max-width: 419px) {
+    .hidden-xxs {
+        display: none;
+    }
+}

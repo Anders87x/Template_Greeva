@@ -1,0 +1,20 @@
+
+// 
+// form-uploads.scss
+//
+
+.dropzone {
+  border: 2px dashed $bg-layout-lighten;
+  background: $bg-layout;
+  border-radius: 6px;
+
+  .dz-preview.dz-image-preview {
+    background-color: transparent;
+  }
+  
+  .dz-preview.dz-file-preview {
+    .dz-image {
+      background: linear-gradient(to bottom, #3f4759, #343b4a);
+    }
+  }
+}

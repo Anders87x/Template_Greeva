@@ -1,0 +1,72 @@
+/* =============
+  Menu - Dark
+============= */
+
+// Leftbar-dark
+.left-side-menu-dark {
+    background-color: $bg-leftbar-dark;
+    box-shadow: none;
+
+    #sidebar-menu {
+        > ul {
+            > li{
+                > a {
+                    color: $menu-item-color-dark;
+    
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $menu-item-hover-color-dark;
+                    }
+                }
+                > a.active {
+                    color: $menu-item-active-color-dark;
+                    background-color: lighten($bg-leftbar-dark, 5%);
+                    border-right-color: $menu-item-active-color-dark;
+                }
+            }
+        }
+
+        .menu-title {
+            color: $gray-500;
+        }
+    }
+
+    .nav-second-level,
+    .nav-thrid-level {
+        li {
+            a {
+                color: $menu-item-color-dark;
+                &:focus,
+                &:hover {
+                    background-color: transparent;
+                    color: $menu-item-hover-color-dark;
+                }
+            }
+        }
+    }
+
+    .nav-second-level,
+    .nav-third-level {
+        li.active {
+            >a {
+                color: $menu-item-active-color-dark;
+            }
+        }
+    }
+}
+
+
+.enlarged #wrapper {
+    .left-side-menu-dark {
+        #sidebar-menu {
+            > ul {
+                > li {
+                    &:hover >a {
+                        background-color: lighten($bg-leftbar-dark,5%);
+                    }
+                }
+            }
+        }
+    }
+}

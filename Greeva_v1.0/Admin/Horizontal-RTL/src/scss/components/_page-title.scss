@@ -1,0 +1,73 @@
+// 
+// page-title.scss
+//
+.page-title-alt-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: $bg-topbar;
+}
+
+.page-title-box {
+    background-color: $white;
+    padding: 0 20px;
+    box-shadow: $shadow;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 5px;
+    .page-title {
+        font-size: 18px;
+        margin: 0;
+        line-height: 50px;
+    }
+    .breadcrumb {
+        margin-bottom: 0;
+        padding: 14px 0;
+        a {
+            color: $text-muted;
+        }
+    }
+}
+
+// header-bordered
+// .header-bordered {
+//     background-color: lighten($dark, 65%);
+//     height: 1px;
+//     margin-top: 20px;
+//     margin-bottom: 30px;
+//     position: relative;
+//     &:before {
+//         content: "";
+//         background-color: $dark;
+//         width: 30px;
+//         height: 3px;
+//         border-radius: 2px;
+//         display: block;
+//         position: absolute;
+//         bottom: -1px;
+//         left: 0px;
+//     }
+// }
+
+@media (max-width: 1023px) {
+    .page-title-box {
+        margin: 0 0 30px 0;
+        .page-title {
+            font-size: 16px;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .breadcrumb {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 419px) {
+    .page-title-box .breadcrumb {
+        display: none;
+    }
+}

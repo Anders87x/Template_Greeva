@@ -1,0 +1,21 @@
+
+//
+// form-summernote.scss
+//
+
+.note-editor.note-frame {
+  border: 3px solid $gray-100;
+  box-shadow: none;
+}
+.note-popover .popover-content, .card-header.note-toolbar {
+  border: none;
+}
+
+.note-editor.note-frame .note-statusbar {
+  background-color: $gray-100;
+  border-color: $gray-100;
+}
+
+.note-editor.note-frame .note-editing-area .note-editable {
+  padding: 10px 20px;
+}

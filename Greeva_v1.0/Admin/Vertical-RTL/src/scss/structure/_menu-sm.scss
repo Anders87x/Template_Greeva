@@ -1,0 +1,66 @@
+/* =============
+  Menu - Small
+============= */
+
+.side-menu-sm {
+    width: $leftbar-width-sm;
+    text-align: center;
+    #sidebar-menu {
+        > ul {
+            > li {
+                > a {
+                    > i {
+                        display: block;
+                        font-size: 18px;
+                        line-height: 24px;
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+            ul  {
+                a {
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+    .menu-arrow,
+    .badge {
+        display: none !important;
+    }
+}
+
+.side-menu-sm+.content-page {
+    margin-right: $leftbar-width-sm;
+}
+
+.enlarged {
+    #wrapper  {
+        .side-menu-sm {
+            text-align: right;
+
+            ul {
+                li {
+                    a {
+                        i {
+                            display: inline-block;
+                            font-size: 18px;
+                            line-height: 17px;
+                            margin-right: 3px;
+                            margin-left: 15px;
+                            vertical-align: middle;
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-custom {
+    .logo.side-menu-sm-logo {
+        width: $leftbar-width-sm;
+    }
+}

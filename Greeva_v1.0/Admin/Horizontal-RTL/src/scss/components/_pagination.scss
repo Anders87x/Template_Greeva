@@ -1,0 +1,17 @@
+.page-item {
+  &:first-child {
+    .page-link {
+      margin-left: -1px;
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      @include border-right-radius($border-radius);
+    }
+  }
+  &:last-child {
+    .page-link {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      @include border-left-radius($border-radius);
+    }
+  }
+}

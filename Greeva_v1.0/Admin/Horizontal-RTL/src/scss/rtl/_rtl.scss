@@ -1,0 +1,75 @@
+
+// 
+// rtl.scss
+//
+
+
+html {
+  direction: rtl;
+}
+
+body {
+  text-align: right;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0;
+  margin-right: .255em;
+}
+
+.list-inline,.list-group,ul {
+  padding-right: 0;
+}
+
+.float-left,.pull-left,.breadcrumb-item {
+  float: right !important;
+}
+
+.float-right,.pull-right,.close  {
+  float: left !important;
+}
+
+.text-left,th,.table,.header-title,.header-title + p ,.dropdown-item,.card-box,
+.select2-container--default .select2-results>.select2-results__options,
+.dropzone {
+  text-align: right !important;
+}
+
+.text-right {
+  text-align: left !important;
+}
+
+.modal-footer>:not(:last-child) {
+  margin-left: .25rem;
+}
+
+.input-group-addon:not(:last-child) {
+  border-right: 1px solid rgba(0,0,0,.15);
+  border-left: 0;
+}
+
+.form-check-inline {
+  margin-right: 0;
+  margin-left: .75rem;
+}
+.form-check {
+  padding-right: 1.25rem;
+  padding-left: 0;
+}
+.form-check-input {
+  margin-right: -1.25rem;
+  margin-left: 0;
+}
+.custom-control {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+.custom-control-label::before,.custom-control-label::after {
+  left: auto;
+  right: 0;
+}
+
+
+dd {
+  margin-right: 0;
+}

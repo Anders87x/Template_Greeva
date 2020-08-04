@@ -1,0 +1,73 @@
+
+// 
+// modal.scss
+//
+
+// Bootstrap modal
+
+.modal {
+  .modal-dialog {
+    .modal-title {
+      margin: 0;
+    }
+    .modal-header {
+      .close {
+        margin: -1.5rem auto -1.5rem -1.5rem;
+      }
+    }
+  }
+}
+
+// Custom modal
+
+.custombox-open {
+  body {
+    padding-left: 0 !important;
+  }
+}
+
+.modal-demo {
+  background-color: $white;
+  width: 600px !important;
+  border-radius: 4px;
+  display: none;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    color: $light;
+  }
+}
+
+@media (max-width: 768px ) {
+  .modal-demo {
+    width: 100% !important;
+  }
+}
+
+.custom-modal-title {
+  padding: 15px 25px;
+  line-height: 22px;
+  font-size: 18px;
+  background-color: $dark;
+  color: $white;
+  text-align: right;
+  margin: 0;
+}
+
+.custom-modal-text {
+  padding: 20px;
+}
+
+.custombox-modal-wrapper {
+  text-align: right;
+}
+
+.custombox-modal-flash, .custombox-modal-rotatedown {
+  .close {
+    top: 20px;
+    z-index: 9999;
+  }
+}

@@ -1,0 +1,40 @@
+//
+// boxed Layout
+//
+
+#boxed-layout {
+    background-color: $bg-body-boxed;
+    // Wrapper
+    #wrapper {
+        background-color: $bg-wrapper;
+        max-width: $boxed-layout-width;
+        margin: 0 auto;
+        box-shadow: $shadow;
+    }
+
+    #topnav {
+      max-width: $boxed-layout-width;
+      margin: 0 auto;
+    }
+
+    // Leftbar Menu
+    .left-side-menu {
+        box-shadow: none;
+    }
+
+    // Footer
+    .footer {
+      background-color: $bg-wrapper;
+      max-width: calc(#{$boxed-layout-width} - #{$leftbar-width});
+      margin: 0 auto;
+    }
+    
+    &.enlarged {
+      #wrapper {
+        .footer {
+          left: 70px;
+          max-width: calc(#{$boxed-layout-width} - 70px);
+        }
+      }
+    }
+}

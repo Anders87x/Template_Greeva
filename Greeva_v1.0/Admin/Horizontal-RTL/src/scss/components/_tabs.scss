@@ -1,0 +1,42 @@
+
+// 
+// tabs.scss
+//
+
+.tab-content {
+  padding: 20px 0 0 0;
+}
+
+//Navtab custom
+.navtab-bg {
+  li {
+    >a {
+      background-color: $gray-100;
+      margin: 0 5px;
+    }
+  }
+}
+.nav-tabs>li>a,.nav-pills>li>a,.nav-pills-tab > a {
+  color: $gray-900;
+  font-weight: $font-weight-semi-bold;
+  font-family: $font-secondary;
+}
+
+// Tab bordered
+
+.tabs-bordered {
+  border-bottom: 2px solid rgba($gray-600,0.2) !important;
+
+  .nav-item {
+    margin-bottom: -2px;
+  }
+}
+
+.tabs-bordered li a, .tabs-bordered li a:hover, .tabs-bordered li a:focus {
+  border: 0 !important;
+  padding: 10px 20px !important;
+}
+
+.tabs-bordered li a.active{
+  border-bottom: 2px solid $gray-600 !important;
+}
